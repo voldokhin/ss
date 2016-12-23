@@ -1,0 +1,242 @@
+/* Smoothness style sheet for jQuery Datepicker v5.0.1. */
+.datepick {
+	background-color: #fff;
+	color: #4E5C69;
+	border: 1px solid #0080f1;
+  border-radius: 0.25em;
+	font-size: 14px;
+}
+.datepick-rtl {
+	direction: rtl;
+}
+.datepick-popup {
+	z-index: 1000;
+}
+.datepick-disable {
+	position: absolute;
+	z-index: 100;
+	background-color: white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.datepick a {
+	color: #fff;
+	text-decoration: none;
+}
+.datepick a.datepick-disabled {
+	color: #ccc;
+	cursor: auto;
+}
+.datepick button {
+    margin: 0.25em;
+    padding: 0.5em 0.1em;
+    background-color: #fcc;
+    border: none;
+    border-radius: 0.25em;
+    font-weight: bold;
+}
+.datepick-nav, .datepick-ctrl {
+	float: left;
+	width: 100%;
+	background-color: #0080f1;
+	font-size: 90%;
+	font-weight: bold;
+}
+.datepick-ctrl {
+	background-color: #0080f1;
+}
+.datepick-cmd {
+	width: 33%;
+	 -moz-transition: color 0.2s ease, background-color 0.2s ease;
+		 -o-transition: color 0.2s ease, background-color 0.2s ease;
+-webkit-transition: color 0.2s ease, background-color 0.2s ease;
+				transition: color 0.2s ease, background-color 0.2s ease;
+}
+.datepick-cmd:hover {
+	background-color: #009DEE;
+}
+.datepick-ctrl .datepick-cmd {
+	width: auto;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+.datepick-ctrl .datepick-cmd:hover {
+	background-color: #009DEE;
+}
+.datepick-cmd.datepick-disabled:hover {
+	background-color: #0080f1;
+	cursor: default;
+}
+.datepick-ctrl .datepick-cmd.datepick-disabled:hover {
+	background-color: #0080f1;
+	cursor: default;
+}
+.datepick-cmd-prevJump, .datepick-cmd-nextJump {
+	width: 8%;
+}
+a.datepick-cmd {
+	height: 2em;
+	line-height: 1.857143em;
+}
+button.datepick-cmd {
+	text-align: center;
+}
+.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {
+	float: left;
+	padding-left: 3%;
+}
+.datepick-cmd-current, .datepick-cmd-today {
+	float: left;
+	width: 34%;
+	text-align: center;
+}
+.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {
+	float: right;
+	padding-right: 3%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,
+.datepick-rtl .datepick-cmd-clear {
+	float: right;
+	padding-left: 0%;
+	padding-right: 3%;
+	text-align: right;
+}
+.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {
+	float: right;
+}
+.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,
+.datepick-rtl .datepick-cmd-close {
+	float: left;
+	padding-left: 3%;
+	padding-right: 0%;
+	text-align: left;
+}
+.datepick-month-nav {
+	float: left;
+	text-align: center;
+}
+.datepick-month-nav div {
+	float: left;
+	width: 12.5%;
+	margin: 1%;
+	padding: 1%;
+}
+.datepick-month-nav span {
+	color: #888;
+}
+.datepick-month-row {
+	clear: left;
+}
+.datepick-month {
+	float: left;
+	width: 15em;
+/*border: 1px solid #aaa;*/
+	text-align: center;
+}
+.datepick-month-header, .datepick-month-header select, .datepick-month-header input {
+  font-size: 12px;
+  line-height: 2;
+	background-color: #E3EAF1;
+	color: #4E5C69;
+	font-weight: bold;
+}
+.datepick-month-header select, .datepick-month-header input {
+	vertical-align: top;
+	height: 2em;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: #fff;
+	border: none;
+}
+.datepick-month-header input {
+	position: absolute;
+	display: none;
+}
+.datepick-month-header option {
+	padding: 3px 10px;
+}
+.datepick-month table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.datepick-month thead {
+	border-bottom: 1px solid #aaa;
+}
+.datepick-month th, .datepick-month td {
+	margin: 0em;
+	padding: 0em;
+	font-weight: normal;
+	text-align: center;
+}
+.datepick-month thead tr {
+	border: 1px solid #aaa;
+}
+.datepick-month td {
+	background-color: #eee;
+	border: 1px solid #aaa;
+}
+.datepick-month td.datepick-week * {
+	background-color: #e0e0e0;
+	color: #222;
+	border: none;
+}
+.datepick-month a {
+	display: block;
+	width: 100%;
+	padding: 0.3em 0em;
+	background-color: #eee;
+	color: #4E5C69;
+	text-decoration: none;
+	 -moz-transition: color 0.2s ease, background-color 0.2s ease;
+		 -o-transition: color 0.2s ease, background-color 0.2s ease;
+-webkit-transition: color 0.2s ease, background-color 0.2s ease;
+				transition: color 0.2s ease, background-color 0.2s ease;
+}
+.datepick-month span {
+	display: block;
+	width: 100%;
+	padding: 0.3em 0em;
+}
+.datepick-month td span {
+	color: #999;
+}
+.datepick-month td .datepick-other-month {
+	background-color: #fff;
+}
+.datepick-month td .datepick-weekend {
+	background-color: #e2e2e2;
+}
+.datepick-month td a.datepick-weekend {
+	color: #404040;
+}
+.datepick-month td span.datepick-weekend {
+	color: #888;
+}
+.datepick-month td .datepick-today {
+	background-color: #96CEF5; color: #333;
+}
+.datepick-month td .datepick-highlight {
+	background-color: #D3D9DE;
+}
+.datepick-month td .datepick-selected {
+	background-color: #FF9742; color: #fff;
+	font-weight: bold;
+}
+.datepick-status {
+	clear: both;
+	text-align: center;
+}
+.datepick-clear-fix {
+	clear: both;
+}
+.datepick-trigger {
+	-webkit-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+}
+.datepick-trigger:hover,
+.datepick-trigger:focus {
+	color: #ff7200
+}

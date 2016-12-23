@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="ru"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="ru"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200">
+	<title>Смартсофт, Stable Stream</title>
+
+<!-- 	Modernizr + jQuery	 -->
+	<script src="js/modernizr.custom.01744.js"></script>
+	<!-- 	Подключение стилей из Bootstrap	 -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-custom.css" />
+	<!-- 	Шрифт с иконками	 -->
+	<link rel="stylesheet" type="text/css" href="css/smartsoft-icons.css" />
+
+	<!-- 	Оформление плагинов	 -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" />
+	<link rel="stylesheet" href="js/helpers/jquery.fancybox-buttons.css?v=1.0.5" media="screen" />
+	<link rel="stylesheet" href="js/helpers/jquery.fancybox-thumbs.css?v=1.0.7" media="screen" />
+	<!-- 	Общие стили	 -->
+	<link rel="stylesheet" type="text/css" href="css/ss-styles.css" />
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/ie.css" />
+	<script type="text/javascript" src="js/PIE.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+	<script src="js/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if lte IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<![endif]-->
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.easing-1.3.pack.js"></script>
+	<script src="js/detectmobilebrowser.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		if(!Modernizr.csscalc){
+			document.write('<script src="js/calc.min.js"><\/script>')
+		};
+		if(!Modernizr.csscolumns){
+			document.write('<script src="js/jquery.columnizer.min.js"><\/script>')
+		}
+	</script>
+
+<!--[if lte IE 9]>
+	<script src="js/jquery.placeholder-enhanced.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+	<div id="page">
+	<!-- 		Шапка		 -->
+		<header class="pg-section" id="top">
+			<div class="videolayer">
+				<video class="playing" data-video="bitrate-ss" width="1920" height="1080" loop preload="auto" autoplay>
+					<source src="video/aurora-loop.mp4" type='video/mp4'>
+					<source src="video/aurora-loop.webm" type='video/webm'>
+				</video>
+				<video data-video="bitrate-20" width="1920" height="1080" loop preload="auto">
+					<source src="video/aurora-loop-80.mp4" type='video/mp4'>
+					<source src="video/aurora-loop-80.webm" type='video/webm'>
+				</video>
+				<video data-video="bitrate-30" width="1920" height="1080" loop preload="auto">
+					<source src="video/aurora-loop-70.mp4" type='video/mp4'>
+					<source src="video/aurora-loop-70.webm" type='video/webm'>
+				</video>
+				<video data-video="bitrate-40" width="1920" height="1080" loop preload="auto">
+					<source src="video/aurora-loop-60.mp4" type='video/mp4'>
+					<source src="video/aurora-loop-60.webm" type='video/webm'>
+				</video>
+			</div>
+
+			<div class="video-overlay">
+				<div class="container">
+					<div class="logo">
+						<svg width="260" height="90">
+							<image xlink:href="ss-page-imgs/stable-stream-logo.svg"
+										src="ss-page-imgs/stable-stream-logo.png" width="260" height="90" />
+						</svg>
+					</div>
+					<h1 id="tech-name">Технология&nbsp;гарантированной доставки&nbsp;контента</h1>
+					<p class="tech-desciption">Stable Stream&nbsp;&mdash; протокол, сервис и&nbsp;технология, которые помогут вашим абонентам слушать музыку, смотреть фильмы, телевизионные программы и&nbsp;любые видео-трансляции в&nbsp;высоком качестве при нестабильном <nobr>интернет-соединении</nobr>.</p>
+
+					<div class="cols-3 cols-indent tech-advantages">
+						<div>
+							<svg width="91" height="90">
+								<image xlink:href="ss-page-imgs/hd-stream.svg"
+											src="ss-page-imgs/hd-stream.png" width="91" height="90" />
+							</svg>
+							<p>Помогаем доставить<br>без потерь аудио и видео<br>высокого качества</p>
+						</div>
+						<div>
+							<svg width="99" height="90">
+								<image xlink:href="ss-page-imgs/worldwide-translation.svg"
+											src="ss-page-imgs/worldwide-translation.png" width="99" height="90" />
+							</svg>
+							<p>Организуем трансляции<br>через интернет,<br>по всему миру</p>
+						</div>
+						<div>
+							<svg width="147" height="90">
+								<image xlink:href="ss-page-imgs/speed-compensation.svg"
+											src="ss-page-imgs/speed-compensation.png" width="147" height="90" />
+							</svg>
+							<p>Компенсируем нестабильную работу каналов связи <br>с потерями до 40%</p>
+						</div>
+					</div><!-- /.tech-advantages -->
+					<p class="bitrate-switcher">битрейт: 1.5 Мbps, канал: 2 Мб/сек, потеря пакетов:&nbsp;<a href="#" class="action-link" data-video-sw="bitrate-20">20%</a>&nbsp;<a href="#" class="action-link" data-video-sw="bitrate-30">30%</a>&nbsp;<a href="#" class="action-link active" data-video-sw="bitrate-40">40%</a></p>
+					<p class="bitrate-switcher"><a href="#" class="action-link active" data-video-ss>Через Stable Stream</a>&nbsp;<a href="#" class="action-link" data-video-usual>Обычная трансляция</a></p>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+
+		</header>
+
+		<section class="pg-section">
+			<div class="container">
+				<br>
+				<br>
+				<br>
+<div class="expandable-single">
+	<div class="expandable-item open" data-id="#topic01">
+		<h2><a href="#" class="expandable-trigger action-link" title="Свернуть">Трансляция видео и&nbsp;музыки для абонентов оператора сотовой&nbsp;связи</a><div class="label">пример использования Stable Stream</div></h2>
+		<div class="expandable-inner">
+
+				<article class="content">
+					<h4>Задача</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Европейский оператор сотовой связи предложил абонентам дополнительные услуги&nbsp;&mdash; аренду фильмов, музыки и&nbsp;аудио-книг.</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>В&nbsp;часы пик, с&nbsp;8&nbsp;до&nbsp;10&nbsp;утра и&nbsp;с&nbsp;17&nbsp;до&nbsp;20&nbsp;часов, качество передачи данных становилось хуже. Из-за этого картинка на&nbsp;видео &laquo;рассыпалась&raquo;, воспроизведение музыки останавливалось, а&nbsp;аудиокниги не&nbsp;загружались.</p>
+							<p>Абоненты с&nbsp;современными смартфонами, подключенные к&nbsp;сети 3G&nbsp;и&nbsp;LTE, не&nbsp;могли пользоваться сервисом. Новые абоненты подключались к&nbsp;сервису, но&nbsp;почти никто из&nbsp;них не&nbsp;продлевал подписку. Поступало много жалоб на&nbsp;низкое качество.</p>
+							<p>Оператор тестировал четыре популярные решения для гарантированной доставки контента. В&nbsp;лаборатории они показывали себя хорошо, но&nbsp;в&nbsp;реальных условиях у&nbsp;абонентов не&nbsp;давали результата.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-smartphones">
+								<svg class="addition-icon" width="59" height="69">
+									<image xlink:href="ss-page-imgs/apple-logo.svg"
+												src="ss-page-imgs/apple-logo.png" width="59" height="69" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="66" height="78">
+									<image xlink:href="ss-page-imgs/android-logo.svg"
+												src="ss-page-imgs/android-logo.png" width="66" height="78" />
+								</svg>
+								<p class="addition-text">смартфоны и планшеты<br>у абонентов</p>
+							</div>
+						</div>
+					</div>
+					<h4>Решение</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>На&nbsp;действующие серверы трансляции установили систему Stable Stream.</p>
+							<p>Подготовили исходный медиа-контент: видео-файлы с&nbsp;битрейтом 3,4&nbsp;Мbps заменили на&nbsp;контент в&nbsp;трех форматах:</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<div class="video-examples embed-responsive embed-responsive-16by9">
+								<ul>
+									<li>
+										<a href="#video-initial-qual" class="action-link active">исходный</a> для&nbsp;быстрого интернета,
+									</li>
+									<li>
+										<a href="#video-1M-qual" class="action-link">средний</a> с&nbsp;битрейтом 1&nbsp;Мbps для&nbsp;абонентов в&nbsp;LTE-сети,&nbsp;и
+									</li>
+									<li>
+										<a href="#video-300k-qual" class="action-link">низкий</a> с&nbsp;битрейтом 300&nbsp;кbps.
+									</li>
+								</ul>
+								<video class="active" id="video-initial-qual" width="100%" autoplay loop preload="auto">
+									<source src="video/aurora-loop.mp4" type='video/mp4'>
+									<source src="video/aurora-loop.webm" type='video/webm'>
+								</video>
+								<video id="video-1M-qual" width="100%" loop preload="auto">
+									<source src="video/aurora-loop-1M.mp4" type='video/mp4'>
+									<source src="video/aurora-loop-1M.webm" type='video/webm'>
+								</video>
+								<video id="video-300k-qual" width="100%" loop preload="auto">
+									<source src="video/aurora-loop-300k.mp4" type='video/mp4'>
+									<source src="video/aurora-loop-300k.webm" type='video/webm'>
+								</video>
+							</div>
+							<br>
+							<p>Транспортный протокол передачи данных RTP заменили <a href="#" data-toggle="hashlink" data-target="#topic04">на&nbsp;Stable Stream Transport Protocol (SSTP)</a></p>
+							<p>В&nbsp;приложение <a href="#" data-toggle="hashlink" data-target="#topic05">для&nbsp;клиентских мобильных устройств</a> добавили поддержку протокола SSTP. Вся инфраструктура для передачи контента находится на&nbsp;стороне Смарт-софт, от&nbsp;клиента требуется только интернет-канал 1&nbsp;Гигабит в&nbsp;секунду</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-handbook">
+								<p class="addition-text">использовали руководство<br><a href="http://info.encoding.com/rs/encoding/images/Encoding.com_HLS%20Success%20Guide.pdf?mkt_tok=eyJpIjoiTlRJeU9UZ3pOMll3WVRabCIsInQiOiJJMUJqcnZPVTdHdCtJNjJFNFZQS3daT3JRRUVnZUJhMHJMaWdEKzY1SnNjeU5ZWjd0SkJQQ0trMjlxQWRtVEJyeCtRTDB4RXR2NDErcUpucURQN2NwdDhpY2RoeFlWUFh" target="_blank">The HTTP-Live-Streaming Success Guide</a></p>
+							</div>
+						</div>
+					</div>
+					<h4>Результат</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Новый транспортный протокол помог динамически подбирать контент: снижать или&nbsp;повышать качество видео или&nbsp;аудио при&nbsp;ухудшении или&nbsp;улучшении качества интернет-соединения.</p>
+							<p>Реализация протокола на&nbsp;конечных устройствах помогла собрать качественное видео и&nbsp;аудио из&nbsp;отдельных сегментов, которые приходили через нестабильные каналы связи.</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>В&nbsp;результате миллион абонентов оператора сотовой связи смогли смотреть фильмы, слушать музыку и&nbsp;аудио-книги в&nbsp;любое время суток, на&nbsp;всей территории покрытия.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-15-thous">
+								<div class="h2">15 000</div>
+								<p class="addition-text">абонентов одновременно<br>могут использовать сервис</p>
+							</div>
+						</div>
+					</div>
+					<h4>Устройства и технологии</h4>
+					<br>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2 inline-illustrations">
+							<div class="text-center">
+								<svg class="addition-icon" width="64" height="71">
+									<image xlink:href="ss-page-imgs/sstp-logo.svg"
+												src="ss-page-imgs/sstp-logo.png" width="64" height="71" />
+								</svg>
+								&ensp;&nbsp;
+								<svg class="addition-icon" width="178" height="52">
+									<image xlink:href="ss-page-imgs/app-store.svg"
+												src="ss-page-imgs/app-store.png" width="178" height="52" />
+								</svg>
+								<p class="addition-text">мобильное приложение<br>с поддержкой протокола SSTP</p>
+							</div>
+							<div class="text-center">
+								<svg class="addition-icon" width="111" height="62" style="margin-bottom: 22px">
+									<image xlink:href="ss-page-imgs/saas-logo.svg"
+												src="ss-page-imgs/saas-logo.png" width="111" height="62" />
+								</svg>
+								<p class="addition-text">решение предоставляется<br>как сервис</p>
+							</div>
+						</div>
+					</div>
+				</article>
+
+		</div><!-- /.expandable-inner -->
+	</div><!-- /.expandable-item -->
+	<br>
+	<div class="expandable-item" data-id="#topic02">
+		<h2><a href="#" class="expandable-trigger action-link">Качественная интернет-трансляция для&nbsp;оператора <nobr>OTT-телевидения в Германии</nobr></a><div class="label">пример использования Stable Stream</div></h2>
+		<div class="expandable-inner">
+
+				<article class="content">
+					<h4>Задача</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Европейская компания, оператор ОТТ-телевидения, столкнулась с&nbsp;проблемой при трансляции видео через интернет.</p>
+							<p>Интернет-каналы в&nbsp;разных регионах Германии были разного качества. В&nbsp;результате у&nbsp;многих абонентов телевизионные трансляции было невозможно смотреть: картинка &laquo;рассыпалась&raquo;, трансляция останавливалась.</p>
+						</div>
+						<div>
+							<div class="content-addition">
+								<img src="ss-page-imgs/smartphone-screenshot.jpg" width="263" height="160" alt="">
+							</div>
+						</div>
+					</div>
+					<h4>Решение</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Организовали передачу сигнала с&nbsp;площадки оператора на&nbsp;сервера трансляции с&nbsp;применением протокола Stable Stream.</p>
+							<p>Подготовили четыре формата вещания, с&nbsp;битрейтом от&nbsp;1&nbsp;до&nbsp;6&nbsp;Mbps.</p>
+							<p>Подготовили плагин для телевизионных приставок у&nbsp;клиентов.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-dune-hd">
+								<svg class="addition-icon" width="128" height="59">
+									<image xlink:href="ss-page-imgs/dune-hd.svg"
+												src="ss-page-imgs/dune-hd.png" width="128" height="59" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h4>Результат</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Пользователи во&nbsp;всех регионах смогли смотреть двести телевизионных каналов и&nbsp;двухнедельный архив записей в&nbsp;высоком качестве.</p>
+							<p>Оператор смог передавать качественный видео-контент во&nbsp;все регионы из&nbsp;единого дата-центра во&nbsp;Франкфурте</p>
+						</div>
+						<div>
+							<div class="content-addition">
+								<div class="h2">5 000</div>
+								<p class="addition-text">новых абонентов<br>подключено за три месяца</p>
+							</div>
+						</div>
+					</div>
+					<h4>Устройства и технологии</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Решение установлено у&nbsp;клиента. Вся инфраструктура для&nbsp;передачи контента и&nbsp;сам контент находятся в&nbsp;дата-центре во&nbsp;Франкфурте.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-paas">
+								<svg class="addition-icon" width="110" height="62">
+									<image xlink:href="ss-page-imgs/paas-logo.svg"
+												src="ss-page-imgs/paas-logo.png" width="110" height="62" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</article>
+		</div><!-- /.expandable-inner -->
+	</div><!-- /.expandable-item -->
+	<br>
+	<div class="expandable-item" data-id="#topic03">
+		<h2><a href="#" class="expandable-trigger action-link">Телевизионное вещание из&nbsp;России в&nbsp;Тайланд через интернет</a><div class="label">пример использования Stable Stream</div></h2>
+		<div class="expandable-inner">
+				<article class="content">
+					<h4>Задача</h4>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Оператор кабельного телевидения в&nbsp;Тайланде решил организовать трансляцию телевизионных каналов из&nbsp;России и&nbsp;Европы.</p>
+							<p>Трансляция должна была работать через интернет, но&nbsp;из-за большого числа переходов и&nbsp;разного качества промежуточных интернет-каналов качество сигнала на&nbsp;выходе оказывалось очень низким. Картинка &laquo;разваливалась&raquo;, и&nbsp;смотреть трансляцию в&nbsp;режиме реального времени было невозможно. </p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Решение</h4>
+							<p>Создали систему передачи контента с&nbsp;серверов вещания в&nbsp;России на&nbsp;серверы оператора и&nbsp;телевизионные приставки клиентов в&nbsp;Тайланде, Малайзии и&nbsp;Вьетнаме. Трансляция организована по&nbsp;протоколу Stable Stream.</p>
+							<p>Применили транскодинг с&nbsp;минимальной потерей качества. При вещании <nobr>HD-каналов</nobr> абоненты получают такое&nbsp;же качество конечного сигнала.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-dune-hd-console">
+								<p><img src="ss-page-imgs/dune-hd-console.jpg" style="margin-top: 0.5em" width="265" height="103" alt=""></p>
+								<p class="addition-text">телевизионные приставки <nobr>DUNE-HD,&nbsp;100,&nbsp;101,&nbsp;301,&nbsp;MAG</nobr></p>
+							</div>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Результат</h4>
+							<p>Телевизионный сигнал передается из&nbsp;России в&nbsp;Азию без спутника и&nbsp;без потери качества.</p>
+							<p>Благодаря сложной задаче, на&nbsp;этом проекте удалось значительно улучшить механизмы контроля потока в&nbsp;протоколе Stable Stream.</p>
+						</div>
+						<div>
+							<div class="content-addition">
+								<p class="addition-text">Чтобы организовать такую трансляцию, требуется несколько секунд на&nbsp;буферизацию. В&nbsp;результате трансляция идет в&nbsp;высоком качестве и&nbsp;не&nbsp;прерывается, но&nbsp;отстает от&nbsp;оригинала на&nbsp;эти несколько секунд. При просмотре футбольных матчей ваши соседи узнают счет раньше вас.</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div><!-- /.expandable-inner -->
+		</div><!-- /.expandable-item -->
+	</div><!-- /.expandable-single -->
+			</div>
+		</section><!-- .pg-section -->
+
+		<section class="pg-section" data-id="#topic04">
+			<div class="container">
+				<h2>Как работает Stable Stream</h2>
+				<article class="content">
+					<h3>Протокол для гарантированной передачи <!--данных--></h3>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>В&nbsp;основе нашей технологии&nbsp;&mdash; собственный протокол гарантированной передачи данных Stable Stream Transport Protocol, SSTP.</p>
+							<p>Он&nbsp;обеспечивает связь между сервером и&nbsp;клиентами, имеет механизмы управления качеством и&nbsp;позволяет передавать аудио- и&nbsp;видео-контент через любые IP-сети.</p>
+							<p>В&nbsp;основе SSTP&nbsp;&mdash; протокол UDP. Так мы&nbsp;передаем минимальный объем служебной информации и&nbsp;обеспечиваем максимальную скорость передачи полезных данных. Собственный механизм буферизации позволяет разделить видео- или аудио-поток на&nbsp;фреймы, и&nbsp;динамически менять их&nbsp;размер. На&nbsp;качественных каналах связи размер фрейма составляет 500&nbsp;килобайт, но&nbsp;может быть уменьшен до&nbsp;30&nbsp;килобайт и&nbsp;даже меньше&nbsp;&mdash; например, при ухудшении качества мобильного интернет-соединения. </p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-mpeg-ts">
+								<svg class="addition-icon" width="198" height="69">
+									<image xlink:href="ss-page-imgs/mpeg-ts-stream.svg"
+												src="ss-page-imgs/mpeg-ts-stream.png" width="198" height="69" />
+								</svg>
+								<p class="addition-text">передает аудио и видео-поток<br>в формате MPEG-TS</p>
+							</div>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Протокол обеспечивает надежную передачу аудио и&nbsp;видео-потока при изменении скорости соединения <nobr>от&nbsp;2&nbsp;до&nbsp;10&nbsp;Мегабит/с</nobr>. Собственный механизм подтверждения доставки помогает определить, какой фрейм дошел до&nbsp;клиентского устройства, а&nbsp;какой нужно переслать повторно.</p>
+							<p>В&nbsp;результате клиент получает аудио- и&nbsp;видео-контент гарантированного качества и&nbsp;не&nbsp;заметит ухудшений качества связи.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-break-time">
+								<div class="h2">< 4 c</div>
+								<p class="addition-text">незаметно&nbsp;для&nbsp;клиента восстановит&nbsp;трансляцию<br>при&nbsp;краткосрочных&nbsp;разрывах <nobr>интернет-соединения</nobr></p>
+							</div>
+						</div>
+					</div>
+					<h3>Сервер для работы с любым потоком данных</h3>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Сервер Stable Stream проверяет качество, авторизует клиентов и&nbsp;передает им&nbsp;аудио- или видео-контент:</p>
+							<ol>
+								<li>Принимает медиа-поток от&nbsp;любого источника: видео-карты, DVB-карты, из медиа-файлов и&nbsp;входящих потоков SSTP (Stable Stream Transport Protocol), UDP, TCP, RTP, HTTP или HLS (HTTP Live Streaming),</li>
+								<li>Проверяет &laquo;уровень здоровья&raquo; потока (health state),</li>
+								<li>Передает входной поток вашим абонентам, которые получают данные по&nbsp;протоколу SSTP, HLS.</li>
+							</ol>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-linux-freebsd">
+								<svg class="addition-icon" width="60" height="67">
+									<image xlink:href="ss-page-imgs/linux-logo.svg"
+												src="ss-page-imgs/linux-logo.png" width="60" height="67" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="80" height="70">
+									<image xlink:href="ss-page-imgs/freebsd-logo.svg"
+												src="ss-page-imgs/freebsd-logo.png" width="80" height="70" />
+								</svg>
+								<p class="addition-text">работает на Linux и FreeBSD</p>
+							</div>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>В&nbsp;процессе передачи потока сервер Stable Stream восстанавливает потерю до&nbsp;40% пакетов и&nbsp;компенсирует обрыв входящего потока длительностью до&nbsp;4&nbsp;секунд.</p>
+							<p>Сервер может учитывать все трансляции для каждого клиента и&nbsp;выдаст нужную информацию для биллинга. Учет происходит через RADIUS-сервер, данные сохраняются в&nbsp;базу данных или в&nbsp;обычный файл.</p>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-conf-file">
+								<svg class="addition-icon" width="71" height="71">
+									<image xlink:href="ss-page-imgs/ssh-logo.svg"
+												src="ss-page-imgs/ssh-logo.png" width="71" height="71" />
+								</svg>
+								<p class="addition-text">все настройки хранятся в одном<br>конфигурационном файле</p>
+							</div>
+						</div>
+					</div>
+					<h3 data-id="#topic05">Клиенты под операционные системы,<br>мобильные устройства и приставки</h3>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Чтобы ваши абоненты могли принимать аудио- и&nbsp;видео-поток гарантированного качества, мы&nbsp;подготовили клиентские реализации на&nbsp;все популярные операционные системы и&nbsp;мобильные устройства:</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<ul>
+								<li>Айфон и&nbsp;Айпад&nbsp;&mdash; в&nbsp;виде медиа-плеера на&nbsp;базе VLC.</li>
+								<li>устройства на&nbsp;Андроид, приставки DUNE-HD (Linux&nbsp;/ MIPS), приставки MAG, приставки на&nbsp;базе чипсета от&nbsp;Риалтек&nbsp;&mdash; в&nbsp;виде приложения PSCLHTTP.</li>
+								<li>Виндовс, Линукс, Мак-ОС&nbsp;&mdash; в&nbsp;виде модуля для VLC-плеера версий 1.1.11, 2.0.1, 2.1.5.</li>
+								<li>сервер Stable Stream может выступать в&nbsp;роли SSTP-клиента при соответствующей настройке.</li>
+							</ul>
+						</div>
+						<div>
+							<div class="content-addition" id="addit-platforms">
+								<svg class="addition-icon" width="59" height="69">
+									<image xlink:href="ss-page-imgs/apple-logo.svg"
+												src="ss-page-imgs/apple-logo.png" width="59" height="69" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="66" height="78">
+									<image xlink:href="ss-page-imgs/android-logo.svg"
+												src="ss-page-imgs/android-logo.png" width="66" height="78" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="128" height="59">
+									<image xlink:href="ss-page-imgs/dune-hd.svg"
+												src="ss-page-imgs/dune-hd.png" width="128" height="59" />
+								</svg>
+								<br>
+								<svg class="addition-icon" width="60" height="67">
+									<image xlink:href="ss-page-imgs/linux-logo.svg"
+												src="ss-page-imgs/linux-logo.png" width="60" height="67" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="67" height="67">
+									<image xlink:href="ss-page-imgs/windows-logo.svg"
+												src="ss-page-imgs/windows-logo.png" width="67" height="67" />
+								</svg>
+								&emsp;&nbsp;
+								<svg class="addition-icon" width="122" height="46">
+									<image xlink:href="ss-page-imgs/macos-logo.svg"
+												src="ss-page-imgs/macos-logo.png" width="122" height="46" />
+								</svg>
+								<p class="addition-text">поддерживаются все популярные платформы</p>
+							</div>
+						</div>
+					</div>
+					<h3>Сервер управления</h3>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Сервер помогает провайдеру управлять собственной инфраструктурой Stable&nbsp;Stream.</p>
+							<h4>Личный кабинет и&nbsp;административная панель</h4>
+							<p>Абоненты могут подключать услуги и&nbsp;смотреть баланс своего счета, а&nbsp;администратор системы&nbsp;&mdash; видеть загрузку и&nbsp;управлять клиентскими подключениями и&nbsp;параметрами работы системы:</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2 tabbed-img-gallery">
+						<!-- Tab panes -->
+							<div class="tab-content" title="Развернуть">
+								<div role="tabpanel" class="tab-pane fade in active" id="screen-1">
+									<img src="ss-page-imgs/interface-snapshots/interface01.jpg" alt="">
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="screen-2">
+									<img src="ss-page-imgs/interface-snapshots/interface02.jpg" alt="">
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="screen-3">
+									<img src="ss-page-imgs/interface-snapshots/interface03.jpg" alt="">
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="screen-4">
+									<img src="ss-page-imgs/interface-snapshots/interface04.jpg" alt="">
+								</div>
+							</div>
+
+						<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#screen-1" class="action-link" aria-controls="screen-1" role="tab" data-toggle="tab">список&nbsp;стримеров,&nbsp;локации&nbsp;и&nbsp;статус</a></li>
+								<li role="presentation"><a class="action-link" href="#screen-2" aria-controls="screen-2" role="tab" data-toggle="tab">список&nbsp;фильмов</a></li>
+								<li role="presentation"><a class="action-link" href="#screen-3" aria-controls="screen-3" role="tab" data-toggle="tab">сессии&nbsp;абонента</a></li>
+								<li role="presentation"><a class="action-link" href="#screen-4" aria-controls="screen-4" role="tab" data-toggle="tab">технические&nbsp;детали&nbsp;о&nbsp;конкретной&nbsp;сессии</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Балансировщик нагрузки</h4>
+							<p>Сервер управления может работать как балансировщик нагрузки:</p>
+							<ol>
+								<li>абоненты запрашивают URL-адреса медиа-потока у&nbsp;сервера управления,</li>
+								<li>сервер управления выбирает наименее нагруженный Stable Stream сервер и&nbsp;выдаёт пользователю соответствующий URL.</li>
+							</ol>
+							<p>Эта функция особенно актуальна при реализации масштабных IPTV-проектов, с&nbsp;количеством абонентов от&nbsp;100 тысяч и&nbsp;суммарным объемом трафика более 10&nbsp;Гигабит в&nbsp;секунду.</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Программный интерфейс для интеграции с&nbsp;внешними системами</h4>
+							<p>Сервер управления реализует несколько Web API, которые помогают интегрировать инфраструктуру Stable Stream в&nbsp;существующие компоненты IPTV-сервиса: API&nbsp;для&nbsp;приставок, для&nbsp;кабинета пользователя, для&nbsp;магазина онлайн-продаж услуг вещания.</p>
+						</div><!--
+						<div>
+							<div class="content-addition">
+								<br>
+								<svg class="addition-icon" width="55" height="76">
+									<image xlink:href="ss-page-imgs/pdf-file-icon.svg"
+												src="ss-page-imgs/pdf-file-icon.png" width="55" height="76" />
+								</svg>
+								<p class="addition-text">Пример <a href="#">документации по API</a> (ПДФ, 2 Мб)</p>
+							</div>
+						</div>-->
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Сервер управления построен на&nbsp;компонентах с&nbsp;открытым исходным кодом:</p>
+							<ul>
+								<li>Apache с&nbsp;поддержкой PHP&nbsp;&mdash; используются для личного кабинета и&nbsp;административной панели, а&nbsp;также сервисов Web API.</li>
+								<li>FreeRADIUS&nbsp;&mdash; обеспечивает аутентификацию, авторизацию и&nbsp;аккаунтинг пользователей сервиса, конечных абонентов.</li>
+								<li>СУБД PostgreSQL&nbsp;&mdash; хранит все данные сервиса.</li>
+							</ul>
+						</div>
+						<div>
+							<div class="content-addition text-justify" id="addit-control-server">
+								<br>
+								<br>
+								<svg class="addition-icon" style="margin-bottom: 20px" width="141" height="57">
+									<image xlink:href="ss-page-imgs/apache-logo.svg"
+												src="ss-page-imgs/apache-logo.png" width="141" height="57" />
+								</svg>
+								&ensp;&nbsp;
+								<svg class="addition-icon" width="110" height="72">
+									<image xlink:href="ss-page-imgs/free-radius-logo.svg"
+												src="ss-page-imgs/free-radius-logo.png" width="110" height="72" />
+								</svg>
+								&ensp;&nbsp;
+								<svg class="addition-icon" width="97" height="74">
+									<image xlink:href="ss-page-imgs/postgresql-logo.svg"
+												src="ss-page-imgs/postgresql-logo.png" width="97" height="74" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section><!-- .pg-section -->
+
+		<section class="pg-section">
+			<div class="container">
+				<h2>Как ускорить внедрение Stable Stream</h2>
+				<article class="content">
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Чтобы&nbsp;упростить и&nbsp;ускорить внедрение Stable Stream в&nbsp;вашей инфраструктуре и&nbsp;для ваших абонентов, мы рекомендуем сделать несколько предварительных действий:</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Сформулируйте задачу</h4>
+							<p>Возможно, вам нужно организовать трансляцию через интернет, передачу видео в&nbsp;режиме реального времени, видео по&nbsp;запросу, вещание цифрового телевидения. Мы&nbsp;поможем решить любую задачу, связанную с&nbsp;гарантированной доставкой видео- и&nbsp;аудио-контента.</p>
+							<h4>Определите исходный поток</h4>
+							<p>Исходный поток может приходить из&nbsp;камеры, видео-файлов, сетевого трафика, по&nbsp;разным протоколам и&nbsp;в&nbsp;разных форматах.</p>
+							<h4>Посчитайте число абонентов</h4>
+							<p>Важно знать общее число абонентов и&nbsp;битрейт, который вы планируете передавать каждому из&nbsp;них.</p>
+							<h4>Подготовьте контент</h4>
+							<p>Мы рекомендуем подготовить несколько вариантов контента, с&nbsp;разным битрейтом&nbsp;&mdash; в&nbsp;зависимости от&nbsp;качества канала мы&nbsp;поднимем или снизим качество трансляции.</p>
+							<p>&nbsp;</p>
+						</div>
+						<div>
+							<div class="content-addition">
+								<h4>&nbsp;</h4>
+								<p class="addition-text"><a href="#" data-toggle="hashlink" data-target="#topic01">Примеры использования Stable Stream</a></p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<footer class="pg-section" id="bottom">
+			<div class="container">
+				<p>&nbsp;</p>
+				<h2>Проверьте Stable Stream в своей сети</h2>
+				<p>Вы можете проверить работу нашего протокола и технологии Stable Stream в своей сети</p>
+				<div class="form" id="testing-request-form">
+					<form action="" method="" name="">
+						<h3>Заявка на тестирование</h3>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="ФИО" required>
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Электронная&nbsp;почта" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Компания" required>
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" placeholder="Телефон">
+						</div>
+						<br>
+						<button type="submit" class="btn">Отправить</button>
+						<p class="success-text invisible icon-cross">Спасибо, ваша заявка принята.<br>Наш менеджер свяжется с&nbsp;вами<br>в&nbsp;течение рабочего дня.</p>
+					</form>
+				</div>
+				<p>Наши инженеры подскажут, как сделать все настройки и&nbsp;провести тесты<br>на&nbsp;реальном контенте в&nbsp;условиях вашей сети.</p>
+
+				<div id="bottom-line" class="cols-3 cols-indent">
+					<div>
+						<p>Пишите: <a href="mailto:info@smart-soft.ru">info@smart-soft.ru</a></p>
+					</div>
+					<div>
+						<figure class="logo-simple"></figure>
+						<p>&copy; 2016, Группа компаний «Смарт-Софт»</p>
+					</div>
+					<div>
+						<p>+7 (495) 77-55-991</p>
+					</div>
+				</div>
+
+			</div>
+<script>
+	$(function(){
+	
+		var $form = $("#testing-request-form");
+
+		$form.children("form").on('submit', function(e){
+			e.preventDefault();
+
+	// Проверка полей ввода
+
+			$form.find(".btn").addClass('invisible');
+			$form.find(".success-text").removeClass('invisible');
+		});
+
+		$form.find(".success-text").on('click', function(e){
+
+	// Проверка полей ввода
+
+			$form.find(".btn").removeClass('invisible');
+			$form.find(".success-text").addClass('invisible');
+		})
+	})
+</script>
+		</footer>
+
+	</div><!-- 	#page	 -->
+
+<!-- 	Плагины	 -->
+	<script src="js/jquery.transit.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<script src="js/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script src="js/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script src="js/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<!-- 	Общий скрипт	 -->
+	<script src="js/ss-main.js" charset="utf-8"></script>
+
+</body>
+</html>
