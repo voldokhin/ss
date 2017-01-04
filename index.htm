@@ -359,7 +359,7 @@
 			<div class="container">
 				<h2>Как работает Stable Stream</h2>
 				<article class="content">
-					<h3>Протокол для гарантированной передачи <!--данных--></h3>
+					<!--<h3>Протокол для гарантированной передачи данных</h3>
 					<div class="cols-3 cols-indent">
 						<div class="colspan-2">
 							<p>В&nbsp;основе нашей технологии&nbsp;&mdash; собственный протокол гарантированной передачи данных Stable Stream Transport Protocol, SSTP.</p>
@@ -387,15 +387,110 @@
 								<p class="addition-text">незаметно&nbsp;для&nbsp;клиента восстановит&nbsp;трансляцию<br>при&nbsp;краткосрочных&nbsp;разрывах <nobr>интернет-соединения</nobr></p>
 							</div>
 						</div>
+					</div>-->
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+						<p>В&nbsp;основе нашей технологии&nbsp;&mdash; собственный протокол гарантированной передачи данных Stable Stream Transport Protocol, SSTP.</p>
+						</div>
 					</div>
-					<h3>Сервер для работы с любым потоком данных</h3>
+					<h3>Сервер управления</h3>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Сервер помогает провайдеру управлять собственной инфраструктурой Stable&nbsp;Stream.</p>
+							<h4>Личный кабинет и&nbsp;административная панель</h4>
+							<p>Абоненты могут подключать услуги и&nbsp;смотреть баланс своего счета, а&nbsp;администратор системы&nbsp;&mdash; видеть загрузку и&nbsp;управлять клиентскими подключениями и&nbsp;параметрами работы системы:</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2 tabbed-img-gallery">
+						<!-- Tab panes -->
+							<div class="tab-content" title="Развернуть">
+								<div role="tabpanel" class="tab-pane fade in active" id="screen-1">
+									<img src="ss-page-imgs/interface-snapshots/interface01.jpg" alt="">
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="screen-2">
+									<img src="ss-page-imgs/interface-snapshots/interface02.jpg" alt="">
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="screen-3">
+									<img src="ss-page-imgs/interface-snapshots/interface03.jpg" alt="">
+								</div>
+								
+							</div>
+
+						<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#screen-1" class="action-link" aria-controls="screen-1" role="tab" data-toggle="tab">список&nbsp;стримеров,&nbsp;локации&nbsp;и&nbsp;статус</a></li>
+								<li role="presentation"><a class="action-link" href="#screen-2" aria-controls="screen-2" role="tab" data-toggle="tab">список&nbsp;фильмов</a></li>
+								<li role="presentation"><a class="action-link" href="#screen-3" aria-controls="screen-3" role="tab" data-toggle="tab">сессии&nbsp;абонента</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Балансировщик нагрузки</h4>
+							<p>Сервер управления может работать как балансировщик нагрузки:</p>
+							<ol>
+								<li>абоненты запрашивают URL-адреса медиа-потока у&nbsp;сервера управления,</li>
+								<li>сервер управления выбирает наименее нагруженный Stable Stream сервер и&nbsp;выдаёт пользователю соответствующий URL.</li>
+							</ol>
+							<p>Эта функция особенно актуальна при реализации масштабных IPTV-проектов, с&nbsp;количеством абонентов от&nbsp;100 тысяч и&nbsp;суммарным объемом трафика более 10&nbsp;Гигабит в&nbsp;секунду.</p>
+						</div>
+					</div>
+					<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<h4>Программный интерфейс для интеграции с&nbsp;внешними системами</h4>
+							<p>Сервер управления реализует несколько Web API, которые помогают интегрировать инфраструктуру Stable Stream в&nbsp;существующие компоненты IPTV-сервиса: API&nbsp;для&nbsp;приставок, для&nbsp;кабинета пользователя, для&nbsp;магазина онлайн-продаж услуг вещания.</p>
+						</div><!--
+						<div>
+							<div class="content-addition">
+								<br>
+								<svg class="addition-icon" width="55" height="76">
+									<image xlink:href="ss-page-imgs/pdf-file-icon.svg"
+												src="ss-page-imgs/pdf-file-icon.png" width="55" height="76" />
+								</svg>
+								<p class="addition-text">Пример <a href="#">документации по API</a> (ПДФ, 2 Мб)</p>
+							</div>
+						</div>-->
+					</div>
+					<!--<div class="cols-3 cols-indent">
+						<div class="colspan-2">
+							<p>Сервер управления построен на&nbsp;компонентах с&nbsp;открытым исходным кодом:</p>
+							<ul>
+								<li>Apache с&nbsp;поддержкой PHP&nbsp;&mdash; используются для личного кабинета и&nbsp;административной панели, а&nbsp;также сервисов Web API.</li>
+								<li>FreeRADIUS&nbsp;&mdash; обеспечивает аутентификацию, авторизацию и&nbsp;аккаунтинг пользователей сервиса, конечных абонентов.</li>
+								<li>СУБД PostgreSQL&nbsp;&mdash; хранит все данные сервиса.</li>
+							</ul>
+						</div>
+						<div>
+							<div class="content-addition text-justify" id="addit-control-server">
+								<br>
+								<br>
+								<svg class="addition-icon" style="margin-bottom: 20px" width="141" height="57">
+									<image xlink:href="ss-page-imgs/apache-logo.svg"
+												src="ss-page-imgs/apache-logo.png" width="141" height="57" />
+								</svg>
+								&ensp;&nbsp;
+								<svg class="addition-icon" width="110" height="72">
+									<image xlink:href="ss-page-imgs/free-radius-logo.svg"
+												src="ss-page-imgs/free-radius-logo.png" width="110" height="72" />
+								</svg>
+								&ensp;&nbsp;
+								<svg class="addition-icon" width="97" height="74">
+									<image xlink:href="ss-page-imgs/postgresql-logo.svg"
+												src="ss-page-imgs/postgresql-logo.png" width="97" height="74" />
+								</svg>
+							</div>
+						</div>
+					</div>-->
+
+					<h3>Сервер для работы с потоком данных</h3>
 					<div class="cols-3 cols-indent">
 						<div class="colspan-2">
 							<p>Сервер Stable Stream проверяет качество, авторизует клиентов и&nbsp;передает им&nbsp;аудио- или видео-контент:</p>
 							<ol>
-								<li>Принимает медиа-поток от&nbsp;любого источника: видео-карты, DVB-карты, из медиа-файлов и&nbsp;входящих потоков SSTP (Stable Stream Transport Protocol), UDP, TCP, RTP, HTTP или HLS (HTTP Live Streaming),</li>
-								<li>Проверяет &laquo;уровень здоровья&raquo; потока (health state),</li>
-								<li>Передает входной поток вашим абонентам, которые получают данные по&nbsp;протоколу SSTP, HLS.</li>
+								<li>Принимает медиа-поток от&nbsp;любого источника: видео-карты, DVB-карты, из медиа-файлов и&nbsp;входящих потоков SSTP (Stable Stream Transport Protocol), UDP, TCP, RTP, HTTP или HLS (HTTP Live Streaming) в&nbsp;формате MPEG-TS.</li>
+								<li>Проверяет &laquo;уровень здоровья&raquo; потока (health state).</li>
+								<li>Передает входной поток вашим абонентам, которые получают данные<br />по&nbsp;протоколу SSTP.</li>
 							</ol>
 						</div>
 						<div>
@@ -415,8 +510,8 @@
 					</div>
 					<div class="cols-3 cols-indent">
 						<div class="colspan-2">
-							<p>В&nbsp;процессе передачи потока сервер Stable Stream восстанавливает потерю до&nbsp;40% пакетов и&nbsp;компенсирует обрыв входящего потока длительностью до&nbsp;4&nbsp;секунд.</p>
-							<p>Сервер может учитывать все трансляции для каждого клиента и&nbsp;выдаст нужную информацию для биллинга. Учет происходит через RADIUS-сервер, данные сохраняются в&nbsp;базу данных или в&nbsp;обычный файл.</p>
+							<p>В&nbsp;процессе передачи сервер Stable Stream может восстанавливать потерю до&nbsp;40% пакетов и&nbsp;компенсировать прерывание связи длительностью от нескольких секунд до минуты, в зависимости от настроек сервера.</p>
+							<p>Сервер может учитывать все трансляции для каждого клиента и&nbsp;выдаст нужную информацию для биллинга. Учет происходит через RADIUS-сервер или Web API, данные сохраняются в&nbsp;базу данных или в&nbsp;обычный файл.</p>
 						</div>
 						<div>
 							<div class="content-addition" id="addit-conf-file">
@@ -438,10 +533,11 @@
 						<div class="colspan-2">
 							<ul>
 								<li>Айфон и&nbsp;Айпад&nbsp;&mdash; в&nbsp;виде медиа-плеера на&nbsp;базе VLC.</li>
-								<li>устройства на&nbsp;Андроид, приставки DUNE-HD (Linux&nbsp;/ MIPS), приставки MAG, приставки на&nbsp;базе чипсета от&nbsp;Риалтек&nbsp;&mdash; в&nbsp;виде приложения PSCLHTTP.</li>
-								<li>Виндовс, Линукс, Мак-ОС&nbsp;&mdash; в&nbsp;виде модуля для VLC-плеера версий 1.1.11, 2.0.1, 2.1.5.</li>
-								<li>сервер Stable Stream может выступать в&nbsp;роли SSTP-клиента при соответствующей настройке.</li>
+								<li>устройства на&nbsp;Андроид, приставки DUNE-HD (Linux&nbsp;/ MIPS), приставки MAG, приставки на&nbsp;базе чипсета от&nbsp;Риалтек&nbsp;&mdash; в&nbsp;виде прокси-приложения, которое транслирует SSTP в&nbsp;HTTP-поток внутри приставки.</li>
+								<li>Виндовс, Линукс, Мак-ОС&nbsp;&mdash; в&nbsp;виде модуля для VLC-плеера.</li>
 							</ul>
+							<p>Сервер Stable Stream может работать как&nbsp;SSTP-клиент при соответствующей настройке. Этот режим поможет оператору передать аудио- или видео-поток без потери качества между собственными площадками: например, в другой город или дата-центр.</p>
+							<p>Поток между сервером Stable Stream и абонентами может быть зашифрован.</p>
 						</div>
 						<div>
 							<div class="content-addition" id="addit-platforms">
@@ -478,98 +574,7 @@
 							</div>
 						</div>
 					</div>
-					<h3>Сервер управления</h3>
-					<div class="cols-3 cols-indent">
-						<div class="colspan-2">
-							<p>Сервер помогает провайдеру управлять собственной инфраструктурой Stable&nbsp;Stream.</p>
-							<h4>Личный кабинет и&nbsp;административная панель</h4>
-							<p>Абоненты могут подключать услуги и&nbsp;смотреть баланс своего счета, а&nbsp;администратор системы&nbsp;&mdash; видеть загрузку и&nbsp;управлять клиентскими подключениями и&nbsp;параметрами работы системы:</p>
-						</div>
-					</div>
-					<div class="cols-3 cols-indent">
-						<div class="colspan-2 tabbed-img-gallery">
-						<!-- Tab panes -->
-							<div class="tab-content" title="Развернуть">
-								<div role="tabpanel" class="tab-pane fade in active" id="screen-1">
-									<img src="ss-page-imgs/interface-snapshots/interface01.jpg" alt="">
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="screen-2">
-									<img src="ss-page-imgs/interface-snapshots/interface02.jpg" alt="">
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="screen-3">
-									<img src="ss-page-imgs/interface-snapshots/interface03.jpg" alt="">
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="screen-4">
-									<img src="ss-page-imgs/interface-snapshots/interface04.jpg" alt="">
-								</div>
-							</div>
-
-						<!-- Nav tabs -->
-							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#screen-1" class="action-link" aria-controls="screen-1" role="tab" data-toggle="tab">список&nbsp;стримеров,&nbsp;локации&nbsp;и&nbsp;статус</a></li>
-								<li role="presentation"><a class="action-link" href="#screen-2" aria-controls="screen-2" role="tab" data-toggle="tab">список&nbsp;фильмов</a></li>
-								<li role="presentation"><a class="action-link" href="#screen-3" aria-controls="screen-3" role="tab" data-toggle="tab">сессии&nbsp;абонента</a></li>
-								<li role="presentation"><a class="action-link" href="#screen-4" aria-controls="screen-4" role="tab" data-toggle="tab">технические&nbsp;детали&nbsp;о&nbsp;конкретной&nbsp;сессии</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="cols-3 cols-indent">
-						<div class="colspan-2">
-							<h4>Балансировщик нагрузки</h4>
-							<p>Сервер управления может работать как балансировщик нагрузки:</p>
-							<ol>
-								<li>абоненты запрашивают URL-адреса медиа-потока у&nbsp;сервера управления,</li>
-								<li>сервер управления выбирает наименее нагруженный Stable Stream сервер и&nbsp;выдаёт пользователю соответствующий URL.</li>
-							</ol>
-							<p>Эта функция особенно актуальна при реализации масштабных IPTV-проектов, с&nbsp;количеством абонентов от&nbsp;100 тысяч и&nbsp;суммарным объемом трафика более 10&nbsp;Гигабит в&nbsp;секунду.</p>
-						</div>
-					</div>
-					<div class="cols-3 cols-indent">
-						<div class="colspan-2">
-							<h4>Программный интерфейс для интеграции с&nbsp;внешними системами</h4>
-							<p>Сервер управления реализует несколько Web API, которые помогают интегрировать инфраструктуру Stable Stream в&nbsp;существующие компоненты IPTV-сервиса: API&nbsp;для&nbsp;приставок, для&nbsp;кабинета пользователя, для&nbsp;магазина онлайн-продаж услуг вещания.</p>
-						</div><!--
-						<div>
-							<div class="content-addition">
-								<br>
-								<svg class="addition-icon" width="55" height="76">
-									<image xlink:href="ss-page-imgs/pdf-file-icon.svg"
-												src="ss-page-imgs/pdf-file-icon.png" width="55" height="76" />
-								</svg>
-								<p class="addition-text">Пример <a href="#">документации по API</a> (ПДФ, 2 Мб)</p>
-							</div>
-						</div>-->
-					</div>
-					<div class="cols-3 cols-indent">
-						<div class="colspan-2">
-							<p>Сервер управления построен на&nbsp;компонентах с&nbsp;открытым исходным кодом:</p>
-							<ul>
-								<li>Apache с&nbsp;поддержкой PHP&nbsp;&mdash; используются для личного кабинета и&nbsp;административной панели, а&nbsp;также сервисов Web API.</li>
-								<li>FreeRADIUS&nbsp;&mdash; обеспечивает аутентификацию, авторизацию и&nbsp;аккаунтинг пользователей сервиса, конечных абонентов.</li>
-								<li>СУБД PostgreSQL&nbsp;&mdash; хранит все данные сервиса.</li>
-							</ul>
-						</div>
-						<div>
-							<div class="content-addition text-justify" id="addit-control-server">
-								<br>
-								<br>
-								<svg class="addition-icon" style="margin-bottom: 20px" width="141" height="57">
-									<image xlink:href="ss-page-imgs/apache-logo.svg"
-												src="ss-page-imgs/apache-logo.png" width="141" height="57" />
-								</svg>
-								&ensp;&nbsp;
-								<svg class="addition-icon" width="110" height="72">
-									<image xlink:href="ss-page-imgs/free-radius-logo.svg"
-												src="ss-page-imgs/free-radius-logo.png" width="110" height="72" />
-								</svg>
-								&ensp;&nbsp;
-								<svg class="addition-icon" width="97" height="74">
-									<image xlink:href="ss-page-imgs/postgresql-logo.svg"
-												src="ss-page-imgs/postgresql-logo.png" width="97" height="74" />
-								</svg>
-							</div>
-						</div>
-					</div>
+					
 				</article>
 			</div>
 		</section><!-- .pg-section -->
@@ -588,7 +593,7 @@
 							<h4>Сформулируйте задачу</h4>
 							<p>Возможно, вам нужно организовать трансляцию через интернет, передачу видео в&nbsp;режиме реального времени, видео по&nbsp;запросу, вещание цифрового телевидения. Мы&nbsp;поможем решить любую задачу, связанную с&nbsp;гарантированной доставкой видео- и&nbsp;аудио-контента.</p>
 							<h4>Определите исходный поток</h4>
-							<p>Исходный поток может приходить из&nbsp;камеры, видео-файлов, сетевого трафика, по&nbsp;разным протоколам и&nbsp;в&nbsp;разных форматах.</p>
+							<p>Исходный поток может приходить из&nbsp;камеры, видео-файлов, сетевого трафика, по&nbsp;разным протоколам и&nbsp;с&nbsp;разными кодеками в&nbsp;формате&nbsp;MPEG-TS.</p>
 							<h4>Посчитайте число абонентов</h4>
 							<p>Важно знать общее число абонентов и&nbsp;битрейт, который вы планируете передавать каждому из&nbsp;них.</p>
 							<h4>Подготовьте контент</h4>
@@ -610,7 +615,7 @@
 			<div class="container">
 				<p>&nbsp;</p>
 				<h2>Проверьте Stable Stream в своей сети</h2>
-				<p>Вы можете проверить работу нашего протокола и технологии Stable Stream в своей сети</p>
+				<p>Вы можете проверить работу нашего протокола и технологии Stable Stream в своей сети:</p>
 				<div class="form" id="testing-request-form">
 					<form action="" method="" name="">
 						<h3>Заявка на тестирование</h3>

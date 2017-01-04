@@ -806,7 +806,7 @@ p + .content h4, p + .content h5, p + .content h6 {
 }
 
 #addit-dune-hd {
-  margin-top: 2.33332em;
+  margin-top: 4.33332em;
 }
 
 /*#addit-paas {  margin-top: 0; }*/
@@ -824,7 +824,7 @@ p + .content h4, p + .content h5, p + .content h6 {
 }
 
 #addit-conf-file {
-  margin-top: -1em;
+  margin-top: 1em;
 }
 
 #addit-platforms {
